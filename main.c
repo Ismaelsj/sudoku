@@ -15,11 +15,16 @@ int	main(int argc, char **argv)
 	int position;
 	char **grille;
 
+	if (argc < 2 || argc < 11)
+	{
+		printf("Invalid input. Try agin...\n");
+		return (0);
+	}
 	nb = '1';
 	position = 0;
 	grille = argv;
 	if (moteur(grille, nb, position) == 0)
-		printf("\nGrille non valide\n\n");
+		printf("Grille non valide\n\n");
 	else
 	{
 		a = 1;
